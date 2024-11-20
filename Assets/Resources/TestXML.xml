@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+	<name>XC</name>
+	<age>18</age>
+	<Item id="1" num="10"/>
+	<Friend>
+		<name>香风智乃</name>
+		<age>9</age>
+	</Friend>
+	<Friend>
+		<name>hina</name>
+		<age>17</age>
+	</Friend>
+</Root>

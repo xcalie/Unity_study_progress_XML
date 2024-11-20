@@ -1,0 +1,42 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+<PlayerInfo>
+	<!--自行设定规则-->
+	<name>XC</name>
+	<atk>10</atk>
+	<def>5</def>
+	<moveSpeed>20</moveSpeed>
+	<roundSpeed>20</roundSpeed>
+	<weapon>
+		<id>1</id>
+		<num>1</num>
+	</weapon>
+	<!--当没有变量名的数据时 就用数据类型命名-->
+	<listInt>
+		<int>1</int>
+		<int>2</int>
+		<int>3</int>
+	</listInt>
+	<itemList>
+		<Item id="1" num="10"/>
+		<Item id="2" num="20"/>
+		<Item id="3" num="40"/>
+	</itemList>
+	<itemDIc>
+		<int>1</int>
+		<Item id="1" num="1"/>
+		<int>2</int>
+		<Item id="2" num="1"/>
+		<int>3</int>
+		<Item id="3" num="1"/>
+		<!--另一种写法
+		<item>
+			<id>1</id>
+			<num>1</num>
+		</item>
+		<item>
+			<id>2</id>
+			<num>2</num>
+		</item>
+		-->
+	</itemDIc>
+</PlayerInfo>
