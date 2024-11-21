@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
 using UnityEngine;
@@ -8,38 +8,38 @@ public class LoadXml : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //C#¶ÁÈ¡XMLµÄ·½·¨ÓĞ¼¸ÖÖ
-        //1.XmlDocument     (°ÑÊı¾İ¼ÓÔØµ½ÄÚ´æÖĞ£¬·½±ã¶ÁÈ¡)
-        //2.XmlTextReader   (Á÷Ê½¼ÓÔØ£¬ÄÚ´æÕ¼ÓÃ¸üÉÙ£¬µ«ÊÇµ¥ÏòÖ»¶Á£¬Ê¹ÓÃ²»·½±ã£¬Ò»°ã²»Ê¹ÓÃ)
-        //3.Linq            (ÓÃLinq×¨ÓÃĞ´·¨)
+        //C#è¯»å–XMLçš„æ–¹æ³•æœ‰å‡ ç§
+        //1.XmlDocument     (æŠŠæ•°æ®åŠ è½½åˆ°å†…å­˜ä¸­ï¼Œæ–¹ä¾¿è¯»å–)
+        //2.XmlTextReader   (æµå¼åŠ è½½ï¼Œå†…å­˜å ç”¨æ›´å°‘ï¼Œä½†æ˜¯å•å‘åªè¯»ï¼Œä½¿ç”¨ä¸æ–¹ä¾¿ï¼Œä¸€èˆ¬ä¸ä½¿ç”¨)
+        //3.Linq            (ç”¨Linqä¸“ç”¨å†™æ³•)
 
-        //XmlDocumentÊÇ×î·½±ãÇÒ×îÈİÒ×²Ù×÷µÄ¶Á·¨
-        #region ¶ÁÈ¡xmlÎÄ¼ş
+        //XmlDocumentæ˜¯æœ€æ–¹ä¾¿ä¸”æœ€å®¹æ˜“æ“ä½œçš„è¯»æ³•
+        #region è¯»å–xmlæ–‡ä»¶
 
         XmlDocument xml = new XmlDocument();
-        //Í¨¹ıxmlDocument¶ÔÏó¼ÓÔØxmlÎÄ¼şÓĞÁ½¸öAPI
-        //´æ·ÅÔÚResourcesÎÄ¼ş¼ĞÏÂµÄxmlÎÄ¼ş
+        //é€šè¿‡xmlDocumentå¯¹è±¡åŠ è½½xmlæ–‡ä»¶æœ‰ä¸¤ä¸ªAPI
+        //å­˜æ”¾åœ¨Resourcesæ–‡ä»¶å¤¹ä¸‹çš„xmlæ–‡ä»¶
         TextAsset asset = Resources.Load<TextAsset>("TestXML");
         print(asset.text);
-        //1Í¨¹ıÕâ¸öAPI·­ÒëxmlÎÄ¼ş
+        //1é€šè¿‡è¿™ä¸ªAPIç¿»è¯‘xmlæ–‡ä»¶
         xml.LoadXml(asset.text);
 
-        //2Í¨¹ıÂ·¾¶¼ÓÔØxmlÎÄ¼ş
+        //2é€šè¿‡è·¯å¾„åŠ è½½xmlæ–‡ä»¶
         //xml.Load(Application.streamingAssetsPath + "/TestXML.xml");
 
         #endregion
 
-        #region ¶ÁÈ¡ÔªËØºÍÊôĞÔĞÅÏ¢
+        #region è¯»å–å…ƒç´ å’Œå±æ€§ä¿¡æ¯
 
-        //½ÚµãĞÅÏ¢Àà
-        //xmlNode µ¥¸ö½ÚµãĞÅÏ¢Àà
-        //½ÚµãÁĞ±íĞÅÏ¢Àà
-        //xmlNodeList ¶à¸ö½ÚµãĞÅÏ¢Àà
+        //èŠ‚ç‚¹ä¿¡æ¯ç±»
+        //xmlNode å•ä¸ªèŠ‚ç‚¹ä¿¡æ¯ç±»
+        //èŠ‚ç‚¹åˆ—è¡¨ä¿¡æ¯ç±»
+        //xmlNodeList å¤šä¸ªèŠ‚ç‚¹ä¿¡æ¯ç±»
 
-        //»ñÈ¡Root¸ù½Úµã
+        //è·å–Rootæ ¹èŠ‚ç‚¹
         XmlNode root = xml.SelectSingleNode("Root");
 
-        //ÔÙ»ñÈ¡¸ù½ÚµãÏÂµÄËùÓĞ×Ó½Úµã
+        //å†è·å–æ ¹èŠ‚ç‚¹ä¸‹çš„æ‰€æœ‰å­èŠ‚ç‚¹
         XmlNode nodeName = root.SelectSingleNode("name");
         print(nodeName.InnerText);
 
@@ -47,24 +47,24 @@ public class LoadXml : MonoBehaviour
         print(nodeAge.InnerText);
 
         XmlNode nodeItem = root.SelectSingleNode("Item");
-        //µÚÒ»ÖÖ·½ÏòÖ±½ÓÍ¨¹ı[]»ñÈ¡ĞÅÏ¢(Ö÷Ê¹ÓÃ)
+        //ç¬¬ä¸€ç§æ–¹å‘ç›´æ¥é€šè¿‡[]è·å–ä¿¡æ¯(ä¸»ä½¿ç”¨)
         print(nodeItem.Attributes["id"].Value);
         print(nodeItem.Attributes["num"].Value);
-        //µÚ¶şÖÖ·½ÏòÍ¨¹ıgetAttributes»ñÈ¡ĞÅÏ¢
+        //ç¬¬äºŒç§æ–¹å‘é€šè¿‡getAttributesè·å–ä¿¡æ¯
         print(nodeItem.Attributes.GetNamedItem("id").Value);
         print(nodeItem.Attributes.GetNamedItem("num").Value);
 
-        //»ñÈ¡List½Úµã
+        //è·å–ListèŠ‚ç‚¹
         XmlNodeList friendList = root.SelectNodes("Friend");
 
-        //±éÀú·½Ê½Ò»
+        //éå†æ–¹å¼ä¸€
         foreach (XmlNode item in friendList)
         {
             print(item.SelectSingleNode("name").InnerText);
             print(item.SelectSingleNode("age").InnerText);
         }
 
-        //±éÀú·½Ê½¶ş
+        //éå†æ–¹å¼äºŒ
         for (int i = 0; i < friendList.Count; i++)
         {
             print(friendList[i].SelectSingleNode("name").InnerText);

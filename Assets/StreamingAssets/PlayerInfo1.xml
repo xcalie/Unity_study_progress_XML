@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PlayerInfo>
+  <name>XC</name>
+  <atk>10</atk>
+  <def>5</def>
+  <moveSpeed>20</moveSpeed>
+  <roundSpeed>20</roundSpeed>
+  <weapon>
+    <id>1</id>
+    <num />
+  </weapon>
+  <listInt>
+    <int>1</int>
+    <int>2</int>
+    <int>3</int>
+  </listInt>
+  <itemList>
+    <Item id="1" num="10" />
+    <Item id="2" num="20" />
+    <Item id="3" num="40" />
+  </itemList>
+  <itemDic>
+    <int>1</int>
+    <Item id="1" num="1" />
+    <int>2</int>
+    <Item id="2" num="1" />
+    <int>3</int>
+    <Item id="3" num="1" />
+  </itemDic>
+</PlayerInfo>
